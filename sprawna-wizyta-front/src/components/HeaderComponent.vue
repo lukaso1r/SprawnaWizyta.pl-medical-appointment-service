@@ -2,7 +2,9 @@
 
     import { RouterLink } from 'vue-router';
     import { useRouter } from 'vue-router';
+    import { defineProps } from 'vue';
     const router = useRouter()
+    const props = defineProps(['registerBtn'])
 
     
 
@@ -22,8 +24,8 @@
             </ul>
         </div>
         <div class="loginRegister">
-            <button @click="router.push('/zaloguj')" id="login">Zaloguj</button>
-            <button @click="router.push('/rejestracja')" id="register">Zarejestruj -></button>
+            <button @click="router.push('/zaloguj')" id="login" v-if="props.registerBtn!='login'">Zaloguj</button>
+            <button @click="router.push('/rejestracja')" id="register" v-if="props.registerBtn!='register'">Zarejestruj -></button>
         </div>
     </header>
 </template>

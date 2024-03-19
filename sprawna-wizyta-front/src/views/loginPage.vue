@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <HeaderComponent />
+    <HeaderComponent registerBtn="login"/>
     <h1>Login Page</h1>
     <FooterComponent /> 
 </template>
