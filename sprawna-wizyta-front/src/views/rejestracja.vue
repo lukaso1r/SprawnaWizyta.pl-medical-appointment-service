@@ -17,8 +17,8 @@
         <div class="colOne">
             <h1>Załóż swoje konto jako:</h1>
             <div class="registerOptions">
-                <button @click="() => {registerOption = 'doctor';}">Lekarz</button>
-                <button @click="() => {registerOption = 'user';}">Pacjent</button>
+                <button @click="() => {registerOption = 'doctor';}" :class="{'csstest': registerOption === 'doctor'}">Lekarz</button>
+                <button @click="() => {registerOption = 'user';}" :class="{'csstest': registerOption === 'user'}">Pacjent</button>
             </div>
             <div class="promoText">
                 <div class="promoTextUser" v-if="registerOption == 'user'">
@@ -65,6 +65,11 @@
 
 <style scoped>
 
+    .csstest{
+        background-color: #23A6F0!important;
+        color: white;
+        border:white!important;
+    }
     
     main{
         width: 80%;
